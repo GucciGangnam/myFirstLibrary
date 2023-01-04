@@ -8,13 +8,15 @@ body {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-    
+    background-color: rgba(150, 150, 150, 0.5);
 
     display: flex;
+    flex-direction: column;
+    gap: 40px;
     justify-content: center;
     align-items: center;
+    align-content: center;
+
 }
     form { 
         display: flex;
@@ -48,7 +50,16 @@ body {
         border: 1px solid black;
         border-radius: 5px;
     }
+#close-btn { 
+    background-color: rgb(221, 0, 0);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: larger;
+    cursor: pointer;
 
+}
 
 
 
@@ -96,5 +107,30 @@ body {
     .library { 
         display: flex;
         flex-wrap: wrap;
+        padding: 20px;
 
+    }
+
+.book { 
+    background-color: rgb(213, 213, 213);
+    width: 200px;
+    height: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0px black;
+}
+    .delete-btn { 
+        background-color: rgb(221, 0, 0);
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+        font-size: larger;
+        cursor: pointer;
     }
