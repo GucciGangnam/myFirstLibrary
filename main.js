@@ -17,12 +17,14 @@ closeBtn.addEventListener("click", function () {
 // Library 
 let myLibrary = [];
 // Book constructor
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-}
+class Book {
+    constructor(title, author, pages, read) {
+      this.title = title;
+      this.author = author;
+      this.pages = pages;
+      this.read = read;
+    }
+  }
 
 // add book to library
 function addBookToLibrary(title, author, pages, read) {
@@ -46,7 +48,7 @@ submitBtn.addEventListener("click", function () {
     title = document.getElementById("title").value = "";
     author = document.getElementById("author").value = "";
     pages = document.getElementById("pages").value = "";
-    
+
     }
 );
 
@@ -86,6 +88,7 @@ library.addEventListener("click", function (e) {
     if (e.target.classList.contains("delete-btn")) {
         let book = e.target.parentElement;
         book.remove();
+        myLibrary.splice(book, 1);
     }
 }
 );
