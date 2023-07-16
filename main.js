@@ -3,7 +3,7 @@ let addBookBtn = document.getElementById("add-new-book-btn");
 addBookBtn.addEventListener("click", function () {
     let popup = document.getElementById("overlayScreen");
     popup.style.display = "";
-    }
+}
 );
 
 // click on cancel button will close pop up
@@ -11,7 +11,7 @@ let closeBtn = document.getElementById("close-btn");
 closeBtn.addEventListener("click", function () {
     let popup = document.getElementById("overlayScreen");
     popup.style.display = "none";
-    }
+}
 );
 
 // Library 
@@ -19,12 +19,12 @@ let myLibrary = [];
 // Book constructor
 class Book {
     constructor(title, author, pages, read) {
-      this.title = title;
-      this.author = author;
-      this.pages = pages;
-      this.read = read;
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
     }
-  }
+}
 
 // add book to library
 function addBookToLibrary(title, author, pages, read) {
@@ -33,7 +33,7 @@ function addBookToLibrary(title, author, pages, read) {
 }
 
 // sumbit form will add that book to th library
-let submitBtn = document.getElementById("sumbit-book-btn"); 
+let submitBtn = document.getElementById("sumbit-book-btn");
 submitBtn.addEventListener("click", function () {
     let title = document.getElementById("title").value;
     let author = document.getElementById("author").value;
@@ -44,12 +44,12 @@ submitBtn.addEventListener("click", function () {
     popup.style.display = "none";
     console.log("book submitted");
     console.log(myLibrary);
-    displayBooks(); 
+    displayBooks();
     title = document.getElementById("title").value = "";
     author = document.getElementById("author").value = "";
     pages = document.getElementById("pages").value = "";
 
-    }
+}
 );
 
 
@@ -58,12 +58,12 @@ submitBtn.addEventListener("click", function () {
 let form = document.getElementById("form");
 form.addEventListener("submit", function (e) {
     e.preventDefault();
-    }
+}
 );
 
 
 
-function displayBooks() { 
+function displayBooks() {
     let library = document.getElementById("library");
     library.innerHTML = "";
     for (let i = 0; i < myLibrary.length; i++) {
@@ -106,3 +106,5 @@ library.addEventListener("click", function (e) {
     }
 }
 );
+
+// this is a test 
